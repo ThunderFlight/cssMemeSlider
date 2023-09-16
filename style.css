@@ -1,0 +1,139 @@
+body{
+    background-color:#1A1B26;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    height: 43.75em;
+}
+.wrapperSlider{
+    .wrapperImages{
+        width: 28.125em;
+        overflow: hidden;
+        .images{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            transform: translateX(41.875em);
+            transition: all 1s;
+            .imagesMemes{
+                    margin-left: 1.25em;
+                    margin-right: 1.25em;
+                    width: 25em;
+                    height: 18.75em;
+                    border-radius: 1.875em;
+                    border: 0.188em solid #2E5DC6;
+            }
+        }
+    }
+    
+    .pagination{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .paginationRadioButton{
+            cursor: pointer;
+            display: none;
+        }
+        .customRadio{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 1.25em;
+        }
+        #test1:checked ~ .customRadio .changeRadioButton .circle #l1{
+            width: 0.938em;
+            height: 0.938em;
+            background-color: black;
+            border-radius: 50%;
+            display: block;
+        }
+        #test2:checked ~ .customRadio .changeRadioButton .circle #l2{
+            width: 0.938em;
+            height: 0.938em;
+            background-color: black;
+            border-radius: 50%;
+            display: block;
+        }
+        #test3:checked ~ .customRadio .changeRadioButton .circle #l3{
+            width: 0.938em;
+            height: 0.938em;
+            background-color: black;
+            border-radius: 50%;
+            display: block;
+        }
+        #test4:checked ~ .customRadio .changeRadioButton .circle #l4{
+            width: 0.938em;
+            height: 0.938em;
+            background-color: black;
+            border-radius: 50%;
+            display: block;
+        }
+        .checkedCircle:disabled{
+            display: none;
+        }
+            .circle{
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 1.25em;
+                width: 1.25em;
+                height: 1.25em;
+                background-color: beige;
+                border-radius: 50%;
+            }
+        
+        .paginationRadioButton[value='850']:checked ~ .wrapperImages .images {
+            transform: translateX(41.875em);
+        }
+        .paginationRadioButton[value="450"]:checked ~ .wrapperImages .images {
+            transform: translateX(15.938em);
+        }
+        .paginationRadioButton[value="-50"]:checked ~ .wrapperImages .images {
+            transform: translateX(-13em);
+        }
+        .paginationRadioButton[value="-400"]:checked ~ .wrapperImages .images  {
+            transform: translateX(-41.875em);
+       }
+       .paginationRadioButton[value='850']:checked ~ .wrapperText .text {
+        transform: translateX(2.5em);
+    }
+    .paginationRadioButton[value="450"]:checked ~ .wrapperText .text {
+        transform: translateX(-26.25em);
+    }
+    .paginationRadioButton[value="-50"]:checked ~ .wrapperText .text {
+        transform: translateX(-50em);
+    }
+    .paginationRadioButton[value="-400"]:checked ~ .wrapperText .text  {
+        transform: translateX(-78.125em);
+   }
+    }
+}
+.wrapperText{
+        width: 18.75em;
+        overflow: hidden;
+        .text{
+            display: flex;
+            flex-direction: row;
+            transition: all 1s;
+            transform: translateX(-20em);
+            .textDescription{ 
+                white-space: nowrap;
+                margin-right: 18.75em;
+                font-weight: 500;
+                font-size: 1em;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: #26A69A;
+            }
+        }
+    }
+/* .surprize{
+    display: none;
+    position: absolute;
+    width: 1300px;
+    height: 700px;
+    top: 5vw;
+    left: 40vh;
+}
+#check:checked ~ .surprize{
+    display: block;
+} */
